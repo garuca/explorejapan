@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -37,22 +36,15 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Stack(
               children: [
                 Positioned(
-                    left: -2,
                     child: Container(
                         width: size.width,
                         height: size.width * 2,
-                        //color: Colors.amber,
                         child: ClipPath(
                             clipper: ClipPathClass(),
-                            /* child: Container(
-                    color: Colors.red,
-                  ),*/
                             child: Image.network(
                               "https://i.picsum.photos/id/142/4272/2848.jpg?hmac=z8IS_an6FQ8ijJOBd-wSVg1JTZbeIDG4TbjHwLQbs0I",
                               fit: BoxFit.cover,
-                            ))
-                        //child: Image.network("https://picsum.photos/800",fit: BoxFit.cover,)),
-                        )),
+                            )))),
                 SafeArea(
                     child: SizedBox(
                   height: 56,
@@ -87,13 +79,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     ListTile(
                       trailing: Wrap(
-                        spacing: 12, // space between two icons
+                        spacing: 12,
                         children: <Widget>[
                           Icon(
                             Icons.search,
                             color: Colors.red,
-                          ), // icon-1
-                          // icon-2
+                          ),
                         ],
                       ),
                       title: Text(
@@ -119,13 +110,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     ListTile(
                       trailing: Wrap(
-                        spacing: 12, // space between two icons
+                        spacing: 12,
                         children: <Widget>[
                           Icon(
                             Icons.check,
                             color: Colors.red,
-                          ), // icon-1
-                          // icon-2
+                          ),
                         ],
                       ),
                       title: Text('Tokio'),
@@ -148,13 +138,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     ListTile(
                       trailing: Wrap(
-                        spacing: 12, // space between two icons
+                        spacing: 12,
                         children: <Widget>[
                           Icon(
                             Icons.check,
                             color: Colors.red,
-                          ), // icon-1
-                          // icon-2
+                          ),
                         ],
                       ),
                       title: Text('Osaka'),
@@ -177,13 +166,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     ListTile(
                       trailing: Wrap(
-                        spacing: 12, // space between two icons
+                        spacing: 12,
                         children: <Widget>[
                           Icon(
                             Icons.check,
                             color: Colors.red,
-                          ), // icon-1
-                          // icon-2
+                          ),
                         ],
                       ),
                       title: Text('Kyoto'),
@@ -258,50 +246,50 @@ class ClipPathClass extends CustomClipper<Path> {
     path.cubicTo(
       1.8560999999999996 * _xScaling,
       75.86585000000001 * _yScaling,
-      0.30779999999999963 * _xScaling,
+      0 * _xScaling,
       75.26075000000002 * _yScaling,
-      0.30779999999999963 * _xScaling,
+      0 * _xScaling,
       75.26075000000002 * _yScaling,
     );
     path.cubicTo(
-      0.30779999999999963 * _xScaling,
+      0 * _xScaling,
       75.26075000000002 * _yScaling,
-      0.20199999999999962 * _xScaling,
+      0 * _xScaling,
       37.77775000000002 * _yScaling,
-      0.20199999999999962 * _xScaling,
+      0 * _xScaling,
       37.77775000000002 * _yScaling,
     );
     path.cubicTo(
-      0.14380999999999963 * _xScaling,
+      0 * _xScaling,
       17.16175000000002 * _yScaling,
-      0.1270559999999996 * _xScaling,
-      0.2637500000000159 * _yScaling,
-      0.16476999999999964 * _xScaling,
-      0.2257500000000192 * _yScaling,
+      0 * _xScaling,
+      0 * _yScaling,
+      0 * _xScaling,
+      0 * _yScaling,
     );
     path.cubicTo(
-      0.20248399999999964 * _xScaling,
-      0.18803600000001922 * _yScaling,
+      0 * _xScaling,
+      0 * _yScaling,
       6.30857 * _xScaling,
-      0.11844000000001921 * _yScaling,
+      0 * _yScaling,
       13.73377 * _xScaling,
-      0.07109000000001922 * _yScaling,
+      0 * _yScaling,
     );
     path.cubicTo(
       13.73377 * _xScaling,
-      0.07109000000001922 * _yScaling,
+      0 * _yScaling,
       27.23377 * _xScaling,
-      -0.015003999999980783 * _yScaling,
+      0 * _yScaling,
       27.23377 * _xScaling,
-      -0.015003999999980783 * _yScaling,
+      0 * _yScaling,
     );
     path.cubicTo(
       27.23377 * _xScaling,
-      -0.015003999999980783 * _yScaling,
+      0 * _yScaling,
       27.4086 * _xScaling,
-      0.36871600000001925 * _yScaling,
+      0 * _yScaling,
       27.4086 * _xScaling,
-      0.36871600000001925 * _yScaling,
+      0 * _yScaling,
     );
     path.cubicTo(
       27.85021 * _xScaling,
@@ -462,5 +450,5 @@ class ClipPathClass extends CustomClipper<Path> {
   }
 
   @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) => true;
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
